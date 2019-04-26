@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+
+        <h2>Paint fill effect with flood fill</h2>
+        <table width="100%"></table>
+
+        <form>
+            <textarea id="matrix" 
+                rows="10" 
+                cols="50">
+                Y,Y,Y,G,G,G,G,G,G,G
+                Y,Y,Y,Y,Y,Y,G,V,V,V
+                G,G,G,G,G,G,G,V,V,V
+                W,W,W,W,W,G,G,G,G,V
+                W,R,R,R,R,R,G,V,V,V
+                W,W,W,R,R,G,G,V,V,V
+                W,B,W,R,R,R,R,R,R,V
+                W,B,B,B,B,R,R,V,V,V
+                W,B,B,V,B,B,B,B,V,V
+                W,B,B,V,V,V,V,V,V,V
+            </textarea>
+            <input id="replacement" type="text" value="B">
+        </form>
+
+        <script src="floodFill.js"></script>
+        <script src="index.js"></script>
+        
+    </body>
+
+</html>
+

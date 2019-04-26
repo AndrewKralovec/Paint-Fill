@@ -1,0 +1,46 @@
+.B {
+    background-color:#0000ff;
+}
+
+.G {
+    background-color:#00ff00;
+}
+
+.R {
+    background-color:#ff0000;
+}
+
+.V {
+    background-color:#5a007e;
+}
+
+.W {
+    background-color:#ffffff;
+}
+
+.Y {
+    background-color:#c5fc00;
+}
+
+table {
+    border: solid;
+    border-color: #000000;
+    background-color: #ffcc99;
+}
+td {
+    border: solid;
+    border-color: #000000;
+}
+
+form{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-bottom: 25px;
+    background: #ffcc99;
+    border: solid;
+    border-color: #000000;
+ }
