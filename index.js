@@ -1,6 +1,7 @@
-var $matrix, $replacement, $table, $td
+const $ = require('jquery')(window)
+let $matrix, $replacement, $table
 
-function initView() {
+const initView = () => {
     matrix = deepTrim($matrix.val())
     matrix = matrixGrid()
 
@@ -8,12 +9,10 @@ function initView() {
     matrix = []
 }
 
-function paintTable() {
-    var table = matrix.map(function (row) {
-        var cols = row.map(function (col) {
-            return '<td class="'+ col + '">' + col + '</td>'
-        }).join('')
 
+const paintTable = () => {
+    let table = matrix.map(row => {
+        let cols = row.map(col => '<td class="'+ col + '">' + col + '</td>').join('')
         return '<tr>' + cols + '</tr>'
     })
 
@@ -26,10 +25,10 @@ function fillClick() {
     matrix = deepTrim($matrix.val())
     matrix = matrixGrid()
 
-    var replacement = $replacement.val()
-    var x = $(this).parent().parent().children().index($(this).parent())
-    var y = $(this).parent().children().index($(this))
-    var pos = { x, y }
+    let replacement = $replacement.val()
+    let x = $(this).parent().parent().children().index($(this).parent())
+    let y = $(this).parent().children().index($(this))
+    let pos = { x, y }
 
     floodFill({ pos, replacement })
     paintTable()
@@ -38,19 +37,11 @@ function fillClick() {
     matrix = []
 }
 
-function matrixGrid() {
-    return matrix.split('\n').map(function(elm) {
-        return elm.split(',')
-    })
-}
+const matrixGrid = () => matrix.split('\n').map(elm => elm.split(','))
 
-function matrixString() {
-    return matrix.map(function(elm) {
-        return elm.join(',')
-    }).join('\n')
-}
+const matrixString = () => matrix.map(elm => elm.join(',')).join('\n')
 
-function deepTrim(input) {
+const deepTrim = input => {
     return $.trim(input)
         .replace(/\s*[\r\n]+\s*/g, '\n')
         .replace(/(<[^\/][^>]*>)\s*/g, '$1')
