@@ -1,25 +1,25 @@
 .B {
-    background-color:#0000ff;
+    background-color: #0000ff;
 }
 
 .G {
-    background-color:#00ff00;
+    background-color: #00ff00;
 }
 
 .R {
-    background-color:#ff0000;
+    background-color: #ff0000;
 }
 
 .V {
-    background-color:#5a007e;
+    background-color: #5a007e;
 }
 
 .W {
-    background-color:#ffffff;
+    background-color: #ffffff;
 }
 
 .Y {
-    background-color:#c5fc00;
+    background-color: #c5fc00;
 }
 
 table {
@@ -27,12 +27,13 @@ table {
     border-color: #000000;
     background-color: #ffcc99;
 }
+
 td {
     border: solid;
     border-color: #000000;
 }
 
-form{
+form {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -43,4 +44,4 @@ form{
     background: #ffcc99;
     border: solid;
     border-color: #000000;
- }
+}
