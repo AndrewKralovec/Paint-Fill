@@ -1,13 +1,13 @@
 let $matrix, $replacement, $table
-const $ = require('jquery')
-const floodFill = require('./floodFill')
+let $ = require('jquery')
+let floodFill = require('./floodFill')
 
-const initView = () => {
+let initView = () => {
     let matrix = matrixGrid($matrix.val())
     paintTable(matrix)
 }
 
-const fillClick = (event) => {
+let fillClick = (event) => {
 
     let matrix = matrixGrid($matrix.val())
     let replacement = $replacement.val()
@@ -21,9 +21,9 @@ const fillClick = (event) => {
     $matrix.val(matrixString(matrix))
 }
 
-const paintTable = matrix => {
+let paintTable = matrix => {
     let table = matrix.map(row => {
-        let cols = row.map(col => '<td class="'+ col + '">' + col + '</td>').join('')
+        let cols = row.map(col => '<td class="' + col + '">' + col + '</td>').join('')
         return '<tr>' + cols + '</tr>'
     })
 
@@ -31,7 +31,7 @@ const paintTable = matrix => {
     $('td').click(fillClick)
 }
 
-const matrixGrid = input => {
+let matrixGrid = input => {
     return $.trim(input)
         .replace(/\s*[\r\n]+\s*/g, '\n')
         .replace(/(<[^\/][^>]*>)\s*/g, '$1')
@@ -40,7 +40,7 @@ const matrixGrid = input => {
         .map(elm => elm.split(','))
 }
 
-const matrixString = matrix => matrix.map(elm => elm.join(',')).join('\n')
+let matrixString = matrix => matrix.map(elm => elm.join(',')).join('\n')
 
 $(document).ready(() => {
     $matrix = $("#matrix")
