@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dir": "browserify -e static/main.js -o public/javascripts/bundle.min.js",
+    "build:dir": "browserify -e src/index.js -o bundle.js",
     "build": "browserify index.js -o bundle.js -t"
   },
   "author": "andrew.kralovec",
